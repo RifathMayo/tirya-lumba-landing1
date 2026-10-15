@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body { @apply bg-nl font-sans text-td; }
+  h1, h2, h3 { @apply font-head; }
+  label { @apply mb-1.5 mt-3.5 block text-sm font-semibold; }
+  input:not([type='checkbox']):not([type='radio']), select, textarea {
+    @apply w-full rounded-[10px] border border-gray-300 bg-white px-3.5 py-2.5 text-[15px] transition focus:border-cy focus:outline-none focus:ring-2 focus:ring-cy/30;
+  }
+}
+@layer components {
+  .wrap { @apply mx-auto max-w-[1120px] px-5; }
+  .h2 { @apply text-[32px] font-bold leading-10 text-pb; }
+  .card { @apply rounded-2xl bg-white p-[22px] shadow-soft; }
+  .form-card { @apply mx-auto my-12 max-w-[640px] rounded-2xl bg-white p-8 shadow-soft; }
+  .badge { @apply inline-block rounded-full bg-az px-2.5 py-0.5 text-xs font-semibold text-pb; }
+  .err { @apply mt-1.5 text-[13px] text-co; }
+  .underline-up { @apply relative inline-block font-semibold text-pb after:absolute after:-bottom-[3px] after:left-0 after:h-0.5 after:w-full after:origin-bottom after:scale-y-0 after:bg-cy after:transition after:duration-300 hover:after:scale-y-[1.5]; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
